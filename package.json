@@ -1,0 +1,59 @@
+{
+  "_args": [
+    [
+      "pdfjs-dist@2.0.120",
+      "C:\\Users\\Hong\\repos\\hub-web-app-v5\\_assets\\style-guide"
+    ]
+  ],
+  "_from": "pdfjs-dist@2.0.120",
+  "_id": "pdfjs-dist@2.0.120",
+  "_inBundle": false,
+  "_integrity": "sha1-lveFParADvK/bddyLV0ww2NjbCo=",
+  "_location": "/pdfjs-dist",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "pdfjs-dist@2.0.120",
+    "name": "pdfjs-dist",
+    "escapedName": "pdfjs-dist",
+    "rawSpec": "2.0.120",
+    "saveSpec": null,
+    "fetchSpec": "2.0.120"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-2.0.120.tgz",
+  "_spec": "2.0.120",
+  "_where": "C:\\Users\\Hong\\repos\\hub-web-app-v5\\_assets\\style-guide",
+  "browser": {
+    "fs": false,
+    "http": false,
+    "https": false,
+    "node-ensure": false
+  },
+  "bugs": {
+    "url": "https://github.com/mozilla/pdf.js/issues"
+  },
+  "dependencies": {
+    "node-ensure": "^0.0.0",
+    "worker-loader": "^1.0.0"
+  },
+  "description": "Generic build of Mozilla's PDF.js library.",
+  "format": "amd",
+  "homepage": "http://mozilla.github.io/pdf.js/",
+  "keywords": [
+    "Mozilla",
+    "pdf",
+    "pdf.js"
+  ],
+  "license": "Apache-2.0",
+  "main": "build/pdf.js",
+  "name": "pdfjs-dist",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/pdfjs-dist.git"
+  },
+  "version": "2.0.120"
+}
