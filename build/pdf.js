@@ -5632,23 +5632,28 @@ var PopupAnnotationElement = function (_AnnotationElement4) {
       if (IGNORE_TYPES.indexOf(this.data.parentType) >= 0) {
         return this.container;
       }
-      var selector = '[data-annotation-id="' + this.data.parentId + '"]';
-      var parentElement = this.layer.querySelector(selector);
-      if (!parentElement) {
-        return this.container;
-      }
-      var popup = new PopupElement({
-        container: this.container,
-        trigger: parentElement,
-        color: this.data.color,
-        title: this.data.title,
-        contents: this.data.contents
-      });
-      var parentLeft = parseFloat(parentElement.style.left);
-      var parentWidth = parseFloat(parentElement.style.width);
-      _dom_utils.CustomStyle.setProp('transformOrigin', this.container, -(parentLeft + parentWidth) + 'px -' + parentElement.style.top);
-      this.container.style.left = parentLeft + parentWidth + 'px';
-      this.container.appendChild(popup.render());
+      var self = this;
+
+      setTimeout(function() {
+        var selector = '[data-annotation-id="' + self.data.parentId + '"]';
+        var parentElement = self.layer.querySelector(selector);
+        if (!parentElement) {
+          return self.container;
+        }
+        var popup = new PopupElement({
+          container: self.container,
+          trigger: parentElement,
+          color: self.data.color,
+          title: self.data.title,
+          contents: self.data.contents
+        });
+        var parentLeft = parseFloat(parentElement.style.left);
+        var parentWidth = parseFloat(parentElement.style.width);
+        _dom_utils.CustomStyle.setProp('transformOrigin', self.container, -(parentLeft + parentWidth) + 'px -' + parentElement.style.top);
+        self.container.style.left = parentLeft + parentWidth + 'px';
+        self.container.appendChild(popup.render());
+      }, 1);
+
       return this.container;
     }
   }]);
