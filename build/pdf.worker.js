@@ -34069,6 +34069,8 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
               encoding = _encodings.SymbolSetEncoding;
             } else if (/Dingbats/i.test(properties.name)) {
               encoding = _encodings.ZapfDingbatsEncoding;
+            } else if (/Wingding/i.test(properties.name)) {
+              encoding = _encodings.WinAnsiEncoding;
             }
           }
         }
